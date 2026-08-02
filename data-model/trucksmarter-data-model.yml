@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/trucksmarter-load-posting-openapi.yml
+description: >-
+  Entity-relationship graph of the TruckSmarter Load Posting API, derived from
+  the generated OpenAPI schemas. The partner surface models freight Loads and
+  their route Stops; equipment and requirements are enumerated vocabularies on
+  the Load.
+entities:
+  - name: Load
+    id_field: load_id
+    description: A freight load posting on the TruckSmarter load board.
+  - name: Stop
+    description: A pickup (type P) or delivery (type D) stop on a load's route, ordered by index.
+  - name: Equipment
+    kind: enum
+    description: 19 supported equipment type keys (van, reefer, flatbed, ...).
+  - name: Requirement
+    kind: enum
+    description: 24 supported special-requirement keys (hazmat, team, tarps, ...).
+relationships:
+  - from: Load
+    to: Stop
+    type: has_many
+    via: stops
+  - from: Load
+    to: Equipment
+    type: has_many
+    via: equipment
+  - from: Load
+    to: Requirement
+    type: has_many
+    via: requirements

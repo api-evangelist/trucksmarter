@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/trucksmarter-load-posting-openapi.yml
+description: >-
+  Standards conformance of the TruckSmarter Load Posting API, derived from the
+  published documentation and generated OpenAPI. TruckSmarter publishes no
+  compliance/certification program page (no trust center or security page was
+  found), so no published-compliance claims are asserted here.
+standards:
+  - id: http-bearer-auth
+    conforms: true
+    evidence: 'Documented auth is a Bearer API key in the Authorization header (RFC 6750 syntax).'
+  - id: iso8601-datetimes
+    conforms: true
+    evidence: Stop start_time/end_time are documented as ISO 8601 datetimes.
+  - id: iso3166-country-codes
+    conforms: true
+    evidence: Stop country is documented as ISO 3166-1 alpha-2.
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth 2.0 surface is published; static partner API keys only.
+  - id: oidc
+    conforms: false
+    evidence: No /.well-known/openid-configuration (probed, 404).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: 'Errors are not application/problem+json; only 400 Bad Request is documented, with a custom { success, message } envelope on success.'
+  - id: json-api
+    conforms: false
+    evidence: Plain JSON bodies; no JSON:API media type or document structure.
+  - id: rfc8594-sunset
+    conforms: false
+    evidence: No deprecation/Sunset header policy is published.

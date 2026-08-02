@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/trucksmarter-load-posting-openapi.yml
+description: >-
+  TruckSmarter publishes no official MCP server (none found in its docs,
+  GitHub org, or the MCP registries). This is a candidate tool list derived
+  from the operations of the partner Load Posting API, for use when forging an
+  MCP server against https://api.trucksmarter.com (Bearer API key required).
+server:
+  name: trucksmarter
+  transport: http
+tools:
+  - name: post_loads
+    description: Create or update one or more freight loads on the TruckSmarter load board.
+    source_operation: openapi/trucksmarter-load-posting-openapi.yml#postLoads
+  - name: delete_loads
+    description: Delete one or more freight loads by their loadId.
+    source_operation: openapi/trucksmarter-load-posting-openapi.yml#deleteLoads

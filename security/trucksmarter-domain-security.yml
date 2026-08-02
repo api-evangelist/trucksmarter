@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.trucksmarter.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 21:13:14 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.trucksmarter.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 16 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: trucksmarter.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

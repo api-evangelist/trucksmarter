@@ -1,0 +1,22 @@
+# TruckSmarter Help Center
+
+> TruckSmarter Help Center
+
+## English
+
+### Dispatch
+
+- [DOT Number Already Registered — How to Fix Dispatch Onboarding](https://help.trucksmarter.com/en/articles/14207870-dot-number-already-registered-how-to-fix-dispatch-onboarding.md): Getting a "DOT duplication" error when signing up for Dispatch? Here's what it means and how to get it resolved fast.
+- [TruckSmarter Dispatch FAQ](https://help.trucksmarter.com/en/articles/13371211-trucksmarter-dispatch-faq.md): Here you'll find other questions users may ask while using Dispatch.
+- [How to Cancel your Dispatch Subscription](https://help.trucksmarter.com/en/articles/13371217-how-to-cancel-your-dispatch-subscription.md): If Dispatch isn't working for you and your business, take the following steps to cancel your subscription.
+- [Dispatch Chat Interface: A Complete Guide](https://help.trucksmarter.com/en/articles/14503569-dispatch-chat-interface-a-complete-guide.md): Dispatch is a chat-based AI dispatcher built into TruckSmarter. Instead of searching through a load board, you describe what you need in plain language. Dispatch can find loads, answer freight ques...
+
+### Brokers
+
+- [How do I log in to the Broker Portal?](https://help.trucksmarter.com/en/articles/14985098-how-do-i-log-in-to-the-broker-portal.md)
+- [What are the different ways I can post loads?](https://help.trucksmarter.com/en/articles/14985245-what-are-the-different-ways-i-can-post-loads.md)
+- [How do I upload loads via CSV or Excel?](https://help.trucksmarter.com/en/articles/14985281-how-do-i-upload-loads-via-csv-or-excel.md)
+- [Is there a limit to how many loads I can post?](https://help.trucksmarter.com/en/articles/14985402-is-there-a-limit-to-how-many-loads-i-can-post.md)
+- [Can I post hot shot or specialty loads?](https://help.trucksmarter.com/en/articles/14985441-can-i-post-hot-shot-or-specialty-loads.md)
+- [Where do my loads appear to carriers?](https://help.trucksmarter.com/en/articles/14985465-where-do-my-loads-appear-to-carriers.md)
+- [What is Dispatch and how does it help my loads get covered?](https://help.trucksmarter.com/en/articles/14985515-what-is-dispatch-and-how-does-it-help-my-loads-get-covered.md)

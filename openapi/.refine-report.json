@@ -1,0 +1,14 @@
+{
+  "provider": "trucksmarter",
+  "sources": [
+    "trucksmarter-loads-api-openapi.yml"
+  ],
+  "outputs": [
+    "trucksmarter-loads-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

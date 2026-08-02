@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea
+description: >-
+  API lifecycle posture for the TruckSmarter Load Posting API, from the
+  published documentation and site probes (2026-07-21). TruckSmarter publishes
+  no versioning policy, no deprecation policy, no SLA, and no status page
+  (status.trucksmarter.com does not resolve). The generated OpenAPI contains
+  no deprecated operations.
+versioning:
+  scheme: none-published
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

@@ -1,0 +1,58 @@
+generated: '2026-07-21'
+method: searched
+source: https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea
+description: >-
+  Cross-cutting request/response semantics of the TruckSmarter Load Posting
+  API (partner API), captured from the published documentation and the
+  generated OpenAPI. The surface is small — two POST endpoints for posting and
+  removing loads — so several conventions (pagination, expansion, metadata)
+  simply do not apply.
+
+base_url: https://api.trucksmarter.com
+api_style: REST over HTTPS, JSON requests and responses
+
+authentication:
+  scheme: Bearer API key in the Authorization header
+  header: 'Authorization: Bearer YOUR_API_KEY'
+  detail: authentication/trucksmarter-authentication.yml
+
+idempotency:
+  supported: true
+  mechanism: natural-key upsert
+  detail: >-
+    POST /loads/postings/post/ is documented as "Create or update one or more
+    loads" keyed on the required unique load_id — replaying the same request
+    converges to the same posted state rather than duplicating loads. Deletes
+    are keyed on loadIds. No Idempotency-Key request header is documented.
+  header: none
+
+pagination:
+  style: none
+  detail: No list/read endpoints are published; both operations are batch POSTs.
+
+field_expansion:
+  supported: false
+
+metadata:
+  supported: false
+
+request_tracing:
+  documented: false
+
+versioning:
+  scheme: none-published
+  detail: No version segment, header, or versioning policy is published.
+
+error_envelope:
+  shape: '{ success: boolean, message: string, loadCount/removeCount: integer }'
+  detail: >-
+    Success responses return success: true with a count and message. 400 Bad
+    Request is documented for both operations; no error body schema or error
+    code registry is published. See errors/trucksmarter-problem-types.yml.
+
+rate_limits:
+  documented: false
+
+cross_links:
+  errors: errors/trucksmarter-problem-types.yml
+  authentication: authentication/trucksmarter-authentication.yml

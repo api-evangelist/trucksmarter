@@ -1,9 +1,27 @@
 aid: trucksmarter
 name: TruckSmarter
-description: TruckSmarter is a company surfaced as a portfolio company of a16z, bain-capital-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  TruckSmarter is a free load board and AI dispatch platform for truck drivers
+  and owner operators, surfacing 100K+ daily available loads with no
+  subscription fees, alongside fuel savings and factoring services and a
+  chat-based AI dispatcher (Dispatch). Brokers post loads and book carriers
+  through a broker portal, CSV/Excel upload, or the partner Load Posting API,
+  which lets partners programmatically create, update, and remove freight
+  loads using a Bearer API key.
 url: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://framerusercontent.com/images/NWzlselGeh333d7PEqt7C8Ap9Mg.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +29,38 @@ x-backed-by:
 - bain-capital-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 18
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
-- Company
-apis: []
+- Trucking
+- Freight
+- Logistics
+- Load Board
+- Transportation
+- Dispatch
+- Fuel
+- Factoring
+apis:
+- aid: trucksmarter:trucksmarter-loads-api
+  name: TruckSmarter Loads API
+  description: Post, update, and remove freight loads on the TruckSmarter load board.
+  humanURL: >-
+    https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea
+  baseURL: https://api.trucksmarter.com
+  tags:
+  - Loads
+  properties:
+  - type: OpenAPI
+    url: openapi/trucksmarter-loads-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +69,53 @@ maintainers:
 common:
 - type: Website
   url: https://www.trucksmarter.com/
+- type: Documentation
+  url: https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea
+- type: APIReference
+  url: https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea
+- type: Support
+  url: https://help.trucksmarter.com/
+- type: Blog
+  url: https://www.trucksmarter.com/blog
+- type: Pricing
+  url: https://www.trucksmarter.com/pricing
+- type: TermsOfService
+  url: https://www.trucksmarter.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.trucksmarter.com/legal/privacy-policy
+- type: SignUp
+  url: https://app.trucksmarter.com/auth/signup
+- type: Login
+  url: https://app.trucksmarter.com/auth/login
+- type: GitHubOrganization
+  url: https://github.com/TruckSmarter
+- type: Authentication
+  url: authentication/trucksmarter-authentication.yml
+- type: LLMsTxt
+  url: llms/trucksmarter-llms.txt
+- type: MCPServer
+  name: TruckSmarter MCP server (candidate, derived — none published)
+  url: mcp/trucksmarter-mcp.yml
+- type: Conventions
+  url: conventions/trucksmarter-conventions.yml
+- type: Idempotency
+  url: conventions/trucksmarter-conventions.yml
+- type: ErrorCatalog
+  url: errors/trucksmarter-problem-types.yml
+- type: DataModel
+  url: data-model/trucksmarter-data-model.yml
+- type: Conformance
+  url: conformance/trucksmarter-conformance.yml
+- type: Lifecycle
+  url: lifecycle/trucksmarter-lifecycle.yml
+- type: Packages
+  url: packages/trucksmarter-packages.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Arazzo
+  name: Post loads to TruckSmarter and remove them once covered
+  url: arazzo/trucksmarter-post-and-remove-loads.yml
+- type: AgenticAccess
+  url: agentic-access/trucksmarter-agentic-access.yml
+- type: DomainSecurity
+  url: security/trucksmarter-domain-security.yml

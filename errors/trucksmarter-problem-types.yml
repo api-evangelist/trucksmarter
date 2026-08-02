@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/trucksmarter-load-posting-openapi.yml
+format: custom
+description: >-
+  Error surface of the TruckSmarter Load Posting API, derived from the
+  generated OpenAPI (itself faithful to the published documentation). The
+  provider documents only 400 Bad Request for both operations and publishes no
+  error body schema, error code registry, or RFC 9457 problem details. Success
+  responses use a { success, message, count } envelope.
+envelope:
+  success_shape: '{ success: boolean, loadCount|removeCount: integer, message: string }'
+problems:
+  - status: 400
+    title: Bad Request
+    detail: Documented for POST /loads/postings/post/; no error body schema is published.
+    source_operation: openapi/trucksmarter-load-posting-openapi.yml#postLoads
+  - status: 400
+    title: Bad Request
+    detail: Documented for POST /loads/postings/delete/; no error body schema is published.
+    source_operation: openapi/trucksmarter-load-posting-openapi.yml#deleteLoads

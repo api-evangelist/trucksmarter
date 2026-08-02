@@ -1,0 +1,9 @@
+generated: '2026-07-21'
+method: derived
+workflows:
+  - file: trucksmarter-post-and-remove-loads.yml
+    workflowId: post-and-remove-loads
+    title: Post loads to TruckSmarter and remove them once covered
+    summary: >-
+      Post a batch of freight loads via the partner Load Posting API, verify
+      the posting, then delete the loads by loadId.

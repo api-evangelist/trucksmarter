@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: npm registry search + github.com/TruckSmarter
+description: >-
+  First-party packages published by TruckSmarter. The npm @trucksmarter scope
+  contains a single package — a fork of react-native-calendars used by the
+  TruckSmarter mobile app — published by ken@trucksmarter.com. It is NOT a
+  client SDK for the Load Posting API; TruckSmarter publishes no API client
+  libraries on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist, or crates.io (PyPI trucksmarter probed: 404). The GitHub org
+  (github.com/TruckSmarter) has one public repo, the same calendars fork.
+packages:
+  - language: typescript
+    registry: npm
+    name: '@trucksmarter/react-native-calendars'
+    url: https://www.npmjs.com/package/@trucksmarter/react-native-calendars
+    install: npm install @trucksmarter/react-native-calendars
+    official: true
+    api_client: false
+    notes: Fork of react-native-calendars (React Native calendar components), not an API SDK.

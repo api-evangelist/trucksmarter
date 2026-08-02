@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Probe of the /.well-known/ discovery surface across TruckSmarter hosts
+  (2026-07-21). No TruckSmarter-owned well-known documents were found. The
+  security.txt served on help.trucksmarter.com belongs to Intercom (the help
+  center is Intercom-hosted) and covers Intercom's disclosure program, not
+  TruckSmarter's, so it is not credited or saved here. The help host does
+  serve a real llms.txt of TruckSmarter's help content — saved to
+  llms/trucksmarter-llms.txt.
+hosts:
+  - host: https://www.trucksmarter.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://app.trucksmarter.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://api.trucksmarter.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+  - host: https://help.trucksmarter.com
+    documents:
+      - {path: /.well-known/security.txt, status: 200, note: Intercom's security.txt (help center host), not TruckSmarter's — not credited}
+      - {path: /llms.txt, status: 200, file: ../llms/trucksmarter-llms.txt}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}

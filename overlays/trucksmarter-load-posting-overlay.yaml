@@ -1,0 +1,25 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the TruckSmarter Load Posting API
+  version: 1.0.0
+  x-apievangelist:
+    generated: '2026-07-21'
+    method: generated
+    source: openapi/trucksmarter-load-posting-openapi.yml
+extends: openapi/trucksmarter-load-posting-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-profile: https://raw.githubusercontent.com/api-evangelist/trucksmarter/refs/heads/main/apis.yml
+  - target: $.paths['/loads/postings/post/'].post
+    update:
+      x-idempotency:
+        style: natural-key-upsert
+        note: Documented as "Create or update one or more loads" keyed on the required unique load_id; replays converge rather than duplicate.
+  - target: $.paths['/loads/postings/delete/'].post
+    update:
+      x-batch:
+        note: Batch delete keyed on loadIds; partial-failure behavior is not documented.
+  - target: $.components.securitySchemes.bearerAuth
+    update:
+      x-key-provisioning: Partner API keys are issued by TruckSmarter; no self-serve provisioning surface is published.
