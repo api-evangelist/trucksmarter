@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TruckSmarter Load Posting Loads API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Loads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Post and update loads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trucksmarter.com/loads/postings/post/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or update one or more loads."
+        },
+        {
+          "info": {
+            "name": "Remove loads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.trucksmarter.com/loads/postings/delete/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete one or more loads by their loadId."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

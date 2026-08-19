@@ -1,0 +1,351 @@
+{
+  "item": [
+    {
+      "id": "a483dc1d-f34e-4995-a840-1ad1d17dd1cb",
+      "name": "Loads",
+      "description": {
+        "content": "Post, update, and remove freight loads on the TruckSmarter load board.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ed15e534-5521-4283-b36f-b3c99d1e7c85",
+          "name": "Post and update loads",
+          "request": {
+            "name": "Post and update loads",
+            "description": {
+              "content": "Create or update one or more loads.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "loads",
+                "postings",
+                "post",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loads\": [\n    {\n      \"load_id\": \"<string>\",\n      \"equipment\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"stops\": [\n        {\n          \"start_time\": \"<dateTime>\",\n          \"city\": \"<string>\",\n          \"state\": \"<string>\",\n          \"index\": \"<integer>\",\n          \"type\": \"<string>\",\n          \"latitude\": \"<number>\",\n          \"longitude\": \"<number>\",\n          \"country\": \"<string>\",\n          \"end_time\": \"<dateTime>\",\n          \"address\": \"<string>\",\n          \"zip_code\": \"<string>\",\n          \"business\": \"<string>\",\n          \"notes\": \"<string>\"\n        },\n        {\n          \"start_time\": \"<dateTime>\",\n          \"city\": \"<string>\",\n          \"state\": \"<string>\",\n          \"index\": \"<integer>\",\n          \"type\": \"<string>\",\n          \"latitude\": \"<number>\",\n          \"longitude\": \"<number>\",\n          \"country\": \"<string>\",\n          \"end_time\": \"<dateTime>\",\n          \"address\": \"<string>\",\n          \"zip_code\": \"<string>\",\n          \"business\": \"<string>\",\n          \"notes\": \"<string>\"\n        }\n      ],\n      \"contact_phone\": \"<string>\",\n      \"contact_extension\": \"<string>\",\n      \"contact_email\": \"<string>\",\n      \"length\": \"<integer>\",\n      \"weight\": \"<number>\",\n      \"requirements\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"commodity\": \"<string>\",\n      \"distance\": \"<number>\",\n      \"general_notes\": \"<string>\",\n      \"offer_price\": \"<number>\"\n    },\n    {\n      \"load_id\": \"<string>\",\n      \"equipment\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"stops\": [\n        {\n          \"start_time\": \"<dateTime>\",\n          \"city\": \"<string>\",\n          \"state\": \"<string>\",\n          \"index\": \"<integer>\",\n          \"type\": \"<string>\",\n          \"latitude\": \"<number>\",\n          \"longitude\": \"<number>\",\n          \"country\": \"<string>\",\n          \"end_time\": \"<dateTime>\",\n          \"address\": \"<string>\",\n          \"zip_code\": \"<string>\",\n          \"business\": \"<string>\",\n          \"notes\": \"<string>\"\n        },\n        {\n          \"start_time\": \"<dateTime>\",\n          \"city\": \"<string>\",\n          \"state\": \"<string>\",\n          \"index\": \"<integer>\",\n          \"type\": \"<string>\",\n          \"latitude\": \"<number>\",\n          \"longitude\": \"<number>\",\n          \"country\": \"<string>\",\n          \"end_time\": \"<dateTime>\",\n          \"address\": \"<string>\",\n          \"zip_code\": \"<string>\",\n          \"business\": \"<string>\",\n          \"notes\": \"<string>\"\n        }\n      ],\n      \"contact_phone\": \"<string>\",\n      \"contact_extension\": \"<string>\",\n      \"contact_email\": \"<string>\",\n      \"length\": \"<integer>\",\n      \"weight\": \"<number>\",\n      \"requirements\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"commodity\": \"<string>\",\n      \"distance\": \"<number>\",\n      \"general_notes\": \"<string>\",\n      \"offer_price\": \"<number>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a9cc850c-c400-4ffd-84cf-3a9af7bcc33a",
+              "name": "Loads posted successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loads",
+                    "postings",
+                    "post",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"loads\": [\n    {\n      \"load_id\": \"123456\",\n      \"equipment\": [\n        \"van\",\n        \"reefer\"\n      ],\n      \"contact_phone\": \"555-123-4567\",\n      \"length\": 53,\n      \"weight\": 45000,\n      \"requirements\": [\n        \"hazmat\",\n        \"team\"\n      ],\n      \"commodity\": \"Electronics\",\n      \"distance\": 750,\n      \"general_notes\": \"Handle with care\",\n      \"contact_extension\": \"202\",\n      \"contact_email\": \"dispatcher@example.com\",\n      \"offer_price\": 2500,\n      \"stops\": [\n        {\n          \"start_time\": \"2025-06-01T08:00:00Z\",\n          \"end_time\": \"2025-06-01T10:00:00Z\",\n          \"address\": \"123 Main St\",\n          \"city\": \"Chicago\",\n          \"state\": \"IL\",\n          \"zip_code\": \"60601\",\n          \"index\": 0,\n          \"type\": \"P\",\n          \"business\": \"Warehouse A\",\n          \"latitude\": 41.8781,\n          \"longitude\": -87.6298,\n          \"country\": \"US\",\n          \"notes\": \"Use dock 5\"\n        },\n        {\n          \"start_time\": \"2025-06-02T14:00:00Z\",\n          \"city\": \"Detroit\",\n          \"state\": \"MI\",\n          \"index\": 1,\n          \"type\": \"D\",\n          \"latitude\": 42.3314,\n          \"longitude\": -83.0458,\n          \"country\": \"US\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"loadCount\": 1,\n  \"message\": \"1 load posted successfully\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5bd70d9c-085d-4ccd-9baa-c8e5e47ac423",
+              "name": "Bad Request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loads",
+                    "postings",
+                    "post",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"loads\": [\n    {\n      \"load_id\": \"123456\",\n      \"equipment\": [\n        \"van\",\n        \"reefer\"\n      ],\n      \"contact_phone\": \"555-123-4567\",\n      \"length\": 53,\n      \"weight\": 45000,\n      \"requirements\": [\n        \"hazmat\",\n        \"team\"\n      ],\n      \"commodity\": \"Electronics\",\n      \"distance\": 750,\n      \"general_notes\": \"Handle with care\",\n      \"contact_extension\": \"202\",\n      \"contact_email\": \"dispatcher@example.com\",\n      \"offer_price\": 2500,\n      \"stops\": [\n        {\n          \"start_time\": \"2025-06-01T08:00:00Z\",\n          \"end_time\": \"2025-06-01T10:00:00Z\",\n          \"address\": \"123 Main St\",\n          \"city\": \"Chicago\",\n          \"state\": \"IL\",\n          \"zip_code\": \"60601\",\n          \"index\": 0,\n          \"type\": \"P\",\n          \"business\": \"Warehouse A\",\n          \"latitude\": 41.8781,\n          \"longitude\": -87.6298,\n          \"country\": \"US\",\n          \"notes\": \"Use dock 5\"\n        },\n        {\n          \"start_time\": \"2025-06-02T14:00:00Z\",\n          \"city\": \"Detroit\",\n          \"state\": \"MI\",\n          \"index\": 1,\n          \"type\": \"D\",\n          \"latitude\": 42.3314,\n          \"longitude\": -83.0458,\n          \"country\": \"US\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3ef94f5-d581-4032-8ab3-e7b57ba798a6",
+          "name": "Remove loads",
+          "request": {
+            "name": "Remove loads",
+            "description": {
+              "content": "Delete one or more loads by their loadId.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "loads",
+                "postings",
+                "delete",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loadIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "09892354-2555-4c25-aaeb-63b06a895749",
+              "name": "Loads removed successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loads",
+                    "postings",
+                    "delete",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"loadIds\": [\n    \"123456\",\n    \"789012\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"removeCount\": 2,\n  \"message\": \"2 loads removed\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "112fa70e-22d6-4abf-bd54-8fda21a5e3d3",
+              "name": "Bad Request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "loads",
+                    "postings",
+                    "delete",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"loadIds\": [\n    \"123456\",\n    \"789012\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.trucksmarter.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "42a80a5c-47ab-479c-812d-75f2693a7f9e",
+    "name": "TruckSmarter Load Posting Loads API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This guide enables partners to integrate with the TruckSmarter Load Posting API to create and delete freight loads in the TruckSmarter system. TruckSmarter operates a free load board for truck drivers and owner operators; this partner API lets brokers and partners post, update, and remove freight loads programmatically. Generated by API Evangelist from the provider's published documentation (Notion) — no OpenAPI is published by the provider.",
+      "type": "text/plain"
+    }
+  }
+}
