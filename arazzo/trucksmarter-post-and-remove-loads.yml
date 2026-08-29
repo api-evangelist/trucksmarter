@@ -11,46 +11,46 @@ info:
     method: generated
     source: openapi/trucksmarter-load-posting-openapi.yml
 sourceDescriptions:
-  - name: loadPosting
-    url: ../openapi/trucksmarter-load-posting-openapi.yml
-    type: openapi
+- name: loadsApi
+  url: ../openapi/trucksmarter-loads-api-openapi.yml
+  type: openapi
 workflows:
-  - workflowId: post-and-remove-loads
-    summary: Post one or more loads, verify the posting, then delete them by loadId.
-    inputs:
-      type: object
-      properties:
-        apiKey:
-          type: string
-          description: Partner API key (Bearer token).
-        loads:
-          type: array
-          description: Loads to post (see Load schema — load_id, equipment, stops required).
-    steps:
-      - stepId: postLoadsStep
-        description: Create or update the loads on the load board.
-        operationId: postLoads
-        requestBody:
-          contentType: application/json
-          payload:
-            loads: $inputs.loads
-        successCriteria:
-          - condition: $statusCode == 200
-          - condition: $response.body.success == true
-        outputs:
-          loadCount: $response.body.loadCount
-      - stepId: deleteLoadsStep
-        description: Remove the same loads by their load_id values once covered or cancelled.
-        operationId: deleteLoads
-        requestBody:
-          contentType: application/json
-          payload:
-            loadIds: $inputs.loads[*].load_id
-        successCriteria:
-          - condition: $statusCode == 200
-          - condition: $response.body.success == true
-        outputs:
-          removeCount: $response.body.removeCount
+- workflowId: post-and-remove-loads
+  summary: Post one or more loads, verify the posting, then delete them by loadId.
+  inputs:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        description: Partner API key (Bearer token).
+      loads:
+        type: array
+        description: Loads to post (see Load schema — load_id, equipment, stops required).
+  steps:
+  - stepId: postLoadsStep
+    description: Create or update the loads on the load board.
+    operationId: postLoads
+    requestBody:
+      contentType: application/json
+      payload:
+        loads: $inputs.loads
+    successCriteria:
+    - condition: $statusCode == 200
+    - condition: $response.body.success == true
     outputs:
-      posted: $steps.postLoadsStep.outputs.loadCount
-      removed: $steps.deleteLoadsStep.outputs.removeCount
+      loadCount: $response.body.loadCount
+  - stepId: deleteLoadsStep
+    description: Remove the same loads by their load_id values once covered or cancelled.
+    operationId: deleteLoads
+    requestBody:
+      contentType: application/json
+      payload:
+        loadIds: $inputs.loads[*].load_id
+    successCriteria:
+    - condition: $statusCode == 200
+    - condition: $response.body.success == true
+    outputs:
+      removeCount: $response.body.removeCount
+  outputs:
+    posted: $steps.postLoadsStep.outputs.loadCount
+    removed: $steps.deleteLoadsStep.outputs.removeCount
