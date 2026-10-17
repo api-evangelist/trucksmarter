@@ -115,38 +115,6 @@ paths:
           description: Bad Request.
 components:
   schemas:
-    Equipment:
-      type: string
-      description: Supported equipment types.
-      enum:
-      - van
-      - reefer
-      - flatbed
-      - container
-      - stepdeck
-      - poweronly
-      - gooseneck
-      - hotshot
-      - boxtruck
-      - conestoga
-      - partial
-      - animalcarrier
-      - carcarrier
-      - cargovan
-      - dumptruck
-      - boathauler
-      - hopperbottom
-      - tanker
-      - other
-    PostLoadsResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-        loadCount:
-          type: integer
-        message:
-          type: string
     Stop:
       type: object
       description: A pickup or delivery stop on the load's route.
@@ -204,6 +172,44 @@ components:
         notes:
           type: string
           description: Stop-specific notes
+    DeleteLoadsRequest:
+      type: object
+      required:
+      - loadIds
+      properties:
+        loadIds:
+          type: array
+          description: Load IDs to delete
+          items:
+            type: string
+    DeleteLoadsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        removeCount:
+          type: integer
+        message:
+          type: string
+    PostLoadsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        loadCount:
+          type: integer
+        message:
+          type: string
+    PostLoadsRequest:
+      type: object
+      required:
+      - loads
+      properties:
+        loads:
+          type: array
+          description: Loads
+          items:
+            $ref: '#/components/schemas/Load'
     Requirement:
       type: string
       description: Supported special requirements.
@@ -232,15 +238,29 @@ components:
       - hazmat
       - chains/straps
       - ltl
-    DeleteLoadsResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-        removeCount:
-          type: integer
-        message:
-          type: string
+    Equipment:
+      type: string
+      description: Supported equipment types.
+      enum:
+      - van
+      - reefer
+      - flatbed
+      - container
+      - stepdeck
+      - poweronly
+      - gooseneck
+      - hotshot
+      - boxtruck
+      - conestoga
+      - partial
+      - animalcarrier
+      - carcarrier
+      - cargovan
+      - dumptruck
+      - boathauler
+      - hopperbottom
+      - tanker
+      - other
     Load:
       type: object
       description: A freight load posting. Either contact_phone or contact_email is required (contact_phone is optional if contact_email is used, and vice versa).
@@ -294,26 +314,6 @@ components:
         offer_price:
           type: number
           description: Proposed offer price (USD)
-    PostLoadsRequest:
-      type: object
-      required:
-      - loads
-      properties:
-        loads:
-          type: array
-          description: Loads
-          items:
-            $ref: '#/components/schemas/Load'
-    DeleteLoadsRequest:
-      type: object
-      required:
-      - loadIds
-      properties:
-        loadIds:
-          type: array
-          description: Load IDs to delete
-          items:
-            type: string
   securitySchemes:
     bearerAuth:
       type: http
