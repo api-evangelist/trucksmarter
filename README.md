@@ -64,6 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-TruckSmarter is a company surfaced as a portfolio company of a16z, bain-capital-ventures and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+TruckSmarter is a free load board and AI dispatch platform for truck drivers and owner operators, surfacing 100K+ daily available loads with no subscription fees, alongside fuel savings and factoring services and a chat-based AI dispatcher (Dispatch). Brokers post loads and book carriers through a broker portal, CSV/Excel upload, or the partner Load Posting API, which lets partners programmatically create, update, and remove freight loads using a Bearer API key.
 
-Backed by: a16z, bain-capital-ventures — https://www.trucksmarter.com/
+**Areas:** Trucking · Freight · Logistics · Load Board · Transportation · Dispatch · Fuel · Factoring
+
+## TruckSmarter on APIs.io
+
+Everything profiled for TruckSmarter is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/trucksmarter/](https://apis.io/providers/trucksmarter/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [TruckSmarter Loads API](https://apis.io/apis/trucksmarter/trucksmarter-loads-api/) — Post, update, and remove freight loads on the TruckSmarter load board.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Arazzo workflows (1)
+
+Multi-step workflows that chain operations into a business task.
+
+- [Post loads to TruckSmarter and remove them once covered](https://apis.io/arazzos/trucksmarter/trucksmarter-post-and-remove-loads/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [trucksmarter](https://apis.io/servers/trucksmarter/trucksmarter/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Trucksmarter Agentic Access](https://apis.io/agentic-access/trucksmarter/trucksmarter-agentic-access/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [TruckSmarter Load Posting Loads API](https://apis.io/collections/trucksmarter/open-trucksmarter-loads-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Trucksmarter Load Posting Overlay](https://apis.io/overlays/trucksmarter/trucksmarter-load-posting-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Trucksmarter Authentication](https://apis.io/security/trucksmarter/trucksmarter-authentication/)
+- [Trucksmarter Domain Security](https://apis.io/security/trucksmarter/trucksmarter-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.trucksmarter.com/)
+- [Documentation](https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea)
+- [API reference](https://trucksmarter.notion.site/TruckSmarter-API-Load-Posting-Documentation-2014aa4e9bc580fe80cfe87e18516dea)
+- [Pricing](https://www.trucksmarter.com/pricing)
+- [Sign up](https://app.trucksmarter.com/auth/signup)
+- [Support](https://help.trucksmarter.com/)
+- [Blog](https://www.trucksmarter.com/blog)
+- [Terms of service](https://www.trucksmarter.com/legal/terms-of-service)
+- [Privacy policy](https://www.trucksmarter.com/legal/privacy-policy)
+- [GitHub](https://github.com/TruckSmarter)
+
+## API Evangelist rating
+
+**Kin Score 29.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 15.1 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 37.5 |
+| Access clarity | 44.7 |
+
+**Agent readiness 27.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/trucksmarter/](https://apis.io/providers/trucksmarter/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for TruckSmarter: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/trucksmarter/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
